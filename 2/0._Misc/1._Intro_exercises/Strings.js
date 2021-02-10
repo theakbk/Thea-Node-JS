@@ -8,6 +8,8 @@ const numberTwo = "2.30";
 // you cannot touch line 1 neither line 2
 
 const result = (parseFloat(numberOne) + parseFloat(numberTwo));
+//const result = 0.0 + numberOne + numberTwo;
+
 console.log(result);
 
 
@@ -56,7 +58,7 @@ const fact = "You are learning javascript!";
 
 // capitalize the J in Javascript
 
-const changed = fact.replace("j" , "J");
+const changed = fact.replace("javascript" , "JavaScript");
 
 console.log(changed);
 
