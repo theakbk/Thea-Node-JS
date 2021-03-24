@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css"> 
+
+    <title>Crud</title>
+</head>
+<body>
+
+    <div class="sidenav">
+        <ul>
+        <li><a href="/">Gå til forsiden</a></li>
+        <li><a href="/intro">Lær syntaksen for javscript/nodeJS</a></li>
+
+
+        <li><a href="/tools">Se værktøjer nøttige for NodeJS</a></li>
+
+        <li><a href="/online">Kom online med NodeJS og Express</a></li>
+        <li><a href="/CRUD">RESTFUL Api CRUD requests</a></li>
+        <li><a href="/advanced">Forbedre din kode med mere avanceret begreber</a></li>
+        <li><a href="/cheat">Oversigt over commandline kommandoer</a></li>
+
+    </ul>
+
+      </div>
+
+    <h1>CRUD operationer i Restful API</h1>
+
+    <h2>GET request liste</h2>
+
+    <p>Her er et eksempel på en get request fra klienten mod serveren. I eksemplet hedder har jeg et array ved navn "heste"
+        Her henter jeg en liste af heste i stedet for én bestemt.
+
+        <img src="/images/Get_list.png" alt="Get request list">
+    </p>
+
+
+
+
+    <h2>GET med ID</h2>
+
+    <p>Et Get request med id kan hente et spcifikt element ud af din liste
+        <br><img style="height: 350px;"src="/images/Get_by_id.png" alt="GETBYID">
+    </p>
+    
+    <h2>Post</h2>
+    <p>
+        En post metode vil typisk være en create metode indenfor crud. Fordi det sender data ind til serveren. 
+        Det gør den ved at indeholde et Json objekt i sin body i stedet for argumenter i URL'en.
+        Typisk ved at tilføje et element til listen og sende den nye liste ind til serveren.
+
+        <br><br>Når man laver Post og update hvor man sender data ind, så gør man brug af Json. 
+        For at bruge Json med express bør man tilføje følgende linje til projektet. 
+            <img src="/images/Json_express.png" alt="Json-import">
+        </p>
+    <h2>PUT/Patch</h2>
+
+    <p>Put og patch bruger man til at opdatere en resource fra serveren. 
+        Den størreste forskel på put og patch er at put overskriver hele resourcen med en ny, hvor patch opdatere den eksisterende.
+        
+        Her er et eksempel på begge dele
+        <br><br><br><br>
+        Her ses put
+        <br>
+        <img style="height: 500px;"src="/images/Put-req.png" alt="Put request">
+
+        <br><br><br><br>
+        Her er en patch <br>
+        <img src="/images/patch.png" alt="patch">
+    </p>
+    <br><br><br><br>
+    <h2>Delete</h2>
+    <p>Eksempler på delete her:
+        <br><br>
+        <img src="/images/delete.png" alt="Delete request">
+
+        <br><br>
+
+        Her ses en anden måde at slette på
+        <img style="width: 1000px;"src="/images/del2.png" alt="Anders' sletmetode">
+    </p>
+</body>
+</html>

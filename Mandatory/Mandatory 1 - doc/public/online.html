@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css"> 
+
+    <title>Online</title>
+    
+</head>
+<body>
+    
+    <div class="sidenav">
+        <ul>
+            <li><a href="/">Gå til forsiden</a></li>
+            <li><a href="/intro">Lær syntaksen for javscript/nodeJS</a></li>
+    
+    
+            <li><a href="/tools">Se værktøjer nøttige for NodeJS</a></li>
+    
+            <li><a href="/online">Kom online med NodeJS og Express</a></li>
+            <li><a href="/CRUD">RESTFUL Api CRUD requests</a></li>
+            <li><a href="/advanced">Forbedre din kode med mere avanceret begreber</a></li>
+            <li><a href="/cheat">Oversigt over commandline kommandoer</a></li>
+    
+        </ul>
+
+
+      </div>
+
+    <h1>Den første webserver</h1>
+    
+    <h2>Package.Json</h2>
+    <p>For at lave en server med express så skal man først oprette en projekt. Så højre-klikker man på projektmappen og laver en ny fil.
+        <br>
+        Den nye fil skal hedde "package.json"
+        
+         og den skal indeholde et json objekt, bestående af en key og en value.
+        <br> 
+        Keyen skal hedde dependencies og value skal være et objekt med et nyt key-value pair indeni. 
+        <br>
+        Det nye key-value pair skal være express og versionen. 
+        <br>
+        Når først man har indtastet express som key efterfulgt af ":", så vil IDE'en foreslå en række versioner som value. 
+        <br>
+        Her bør man vælge den med "^" i starten, da den altid vil sørge for det nyeste.
+        <br><br>
+        <img src="/images/Express_v.png">
+
+        <br><br>
+
+        Når man er kommet så langt, skal man åbne en terminal i VSCode, hvis man ikke allerede har det. 
+        <br>
+        For at åbne terminalen i VSCode trykker man på et faneblad i toppen der hedder terminal og trykker "new terminal".
+        
+        Når terminalen så er åbnet, bruger man kommandoer som pwd, ls og cd til at finde frem til projektet. Når man er i projekt-mappen så skriver man kommandoen "npm install" for, 
+        at installere express med den specifikke version. 
+        <h3>Tilføj express til applikationen</h3>
+        <p>
+            Hvis installationen har været en succes vil der nu være kommet 2 nye mapper i projekt-mappen: 
+        "package-lock.json" og "node_modules". 
+
+        Yderligere mangler der en fil til den "rigtige" NodeJS kode. Den nye fil skal oprettes og bør efter express dokumentation
+        navngives "app.js". 
+
+        I app.js skal så ligge det resterende express kode for at komme online. 
+        Her skal ligge et import statement:
+        <br>
+        <img src="/images/express_import.png" alt="express_import">
+        <br><br>
+        Desuden skal man lytte på en port. For at lytte på en port kan man nøjes med kommandoen:
+         "app.listen(8080)".
+         <br>
+
+         <img src="/images/Portnummer.png" alt="port">
+<br>
+         Nu hvor express er sat op, så er vi klar til vores første Rest Crud requests. 
+    </p>
+    
+</body>
+</html>

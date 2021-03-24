@@ -1,0 +1,61 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 215px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(204, 198, 198); 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+
+  table, th, td {
+      margin-left: 230px;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+  
+  
+    padding: 15px;
+  
+
+ 
+    
+  
+}
+th {text-align: left;}
+
+
+
+h2, h3, p {
+    margin-left: 243px;
+}
+
+
+
+h1{
+    margin-left: 220px;
+    font-size:300%;
+}
+
+p {
+    text-align: left;
+    margin-left: 245px;
+    margin-right: 20px;
+}

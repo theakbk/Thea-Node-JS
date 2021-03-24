@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css"> 
+
+    <title>Avanceret javascript begreber</title>
+</head>
+<body>
+
+    <div class="sidenav">
+        <ul>
+            <li><a href="/">Gå til forsiden</a></li>
+            <li><a href="/intro">Lær syntaksen for javscript/nodeJS</a></li>
+    
+    
+            <li><a href="/tools">Se værktøjer nøttige for NodeJS</a></li>
+    
+            <li><a href="/online">Kom online med NodeJS og Express</a></li>
+            <li><a href="/CRUD">RESTFUL Api CRUD requests</a></li>
+            <li><a href="/advanced">Forbedre din kode med mere avanceret begreber</a></li>
+            <li><a href="/cheat">Oversigt over commandline kommandoer</a></li>
+    
+        </ul>
+      </div>
+
+    <h1>Avanceret javascript begreber</h1>
+    
+    <h2>Hoisting </h2>
+    <p>Hoisting er et begreb i javascript, hvor man giver en variabel en værdi, inden den bliver initialiseret(indenfor gældende scope).
+        Man gør det ved at sætte alle variabler i toppen af et dokument. 
+        Det virker, fordi når javascript kører koden, så læser fortolkeren koden igennem flere gange, første gang for variabel initialiseringer.
+    </p>
+    
+    
+    <h2>Envirement variables, herunde pathvariables</h2>
+    <p> Envirement variables fortæller som navnet antyder, noget om ens udviklingsmiljø.
+        
+        <br><br> I NodeJS kan man bruge Envirement variables til f.eks. at definere hvilken HTTP port, som applikationen kan kører på, samt hvile mapper eller "paths" man gerne vil serve med Express. 
+            <br><br>
+            Man laver envirement variables så det er nemt at ændre f.eks. portnummeret. Eller de mapper, som express får lov at få afgang til. 
+            <br>Hvis en anden programmør får koden, så kan vedkommende hurtigt ændre specifikationerne. 
+            <br>Selve portnummeret kan man finde inde i package.json, hvor man skriver et script. 
+            <br>Scriptet kan køres med kommandoen "nmp run [script-navn. (i dette tilfælde start-dev)]"  
+            <br>Så kører scriptet på de betingelser som scriptet har sat op. 
+
+            <br><br>
+
+            <img src="/images/ENV_Path.png" alt="path"><br>
+            Her ses et eksempel hvor vi giver express lov at tilgå en specifik mappe.
+            <br><br>
+            <img src="/images/ENV_port.png" alt="port">
+            <br>
+            Her ses hvordan man vælger porten. Enten den definerede i scriptet i package.JSON eller default porten for tomcat, 8080.
+            <br><br>
+            <img src="/images/Package_Json.png" alt="path"><br>
+            Her ses scriptet inde i package.json og det script kan køres med en bestemt commandline kommando, nemlig npm run [scriptnavn]
+            <br><br><br><br>
+            Hvis man desuden laver portnummeret inde i scriptet samt skriver linjen med portnummeret ovenfor, så bør man desuden opdatere den linje hvor man lytter på en bestemt port, som nævnt i "kom online". 
+            <br>Erstatningen bør være en call-back funktion, hvor man tager hensyn til at porten kan være forskellig fra gang til gang
+            <br>
+            <img src="/images/ny_port_metode.png" alt="alternativ port"><br>
+            Her ses en opdateret app.listen funktion. 
+        </p>
+    
+    <br>
+    <h2>Hvorfor skal adgangen til brug af statiske filer bruge ekstra kodelinjer?</h2>
+    <p>Som nævnt ovenfor så bruger man blandt andet envirement variables til at definere hvilke mapper og paths, som express må serve.
+        Dette er pga sikkerhed. Serveren skal generelt ikke have adgang til ret meget, men hvis serveren skal kunne vise HTML siderne, så skal man sige at express godt må få adgang til dem. 
+    </p>
+    <br>
+    <h2>== VS ===</h2>
+    <p>
+        
+        I javascript findes der, i modsætning til mange andre programmeringssprog, 3 forskellige kommandoer med lighedstegn afhængig af antallet. 
+        <br>Hvoraf de mest normale programmeringssprog kun har 2. 
+        <br>Der findes 1 lighedstegn som tildeler en variabel en værdi. 
+        <br>Men så findes der en kommando med 2 og en kommando med 3 lighedstegn. 
+        <br>Generelt går man efter at bruge den med 3 lighedstegn som jeg skriver i javascript intro. Det er den der oversætter mest direkte til de mere typede sprogs lighedstegnskommando. 
+        <br>For 3*lighedstegn betyder at typerne bør sammenlignes som de er. 
+        <br>Det betyer så at kommandoen der kun er med 2 lighedstegn den åbner op for "type coercion". Det betyder at javascript begynder at konvertere typerne, blandt andet sådan at 1 og true kan evaluere til true. 
+        <br>Selvom de slet ikke burde kunne sammenlignes. 
+    </p>
+    <br>
+    <h2>Let vs var</h2>
+    <p>
+        I Javascript findes der flere kommandoer for at oprette en variabel. Nemlig let, var og const.
+        <br>Situationen er dog sådan at vi til enhver tid bør vælge let og const. 
+        <br><br>
+        Det er nemlig sådan generelt at let kan sammenlignes med en lokal-variabel indenfor det givne scope. 
+        <br>Problemerne opstår så når man begynder at ville lave variabler med keywordet "var".
+        <br>Var kan nemlig initialiseres indenfor lokale scopes, men den vil stadig gælde som en global variabel. Dvs. man kan altså nemt komme til at overskrive denne værdi, samt den kan skabe kaos med dens meget åbne scope.
+    </p>
+</body>
+</html>
