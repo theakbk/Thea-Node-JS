@@ -1,5 +1,29 @@
 {
-    "dependencies": {
-        "express": "^4.17.1"
-    }
+        "name": "nodefolio",
+        "version": "0.0.1",
+        "description": "This is a personal portfolio written in Node.js",
+        "main": "app.js",
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/theakbk/Thea-Node-JS.git"
+        },
+        "keywords": [
+          "portfolio",
+          "personal",
+          "website",
+          "kea"
+        ],
+        "author": "Thea Kampmann",
+        "license": "MIT",
+        "bugs": {
+          "url": "https://github.com/theakbk/Thea-Node-JS/issues"
+        },
+        "homepage": "https://github.com/theakbk/Thea-Node-JS",
+        "dependencies": {
+          "express": "^4.17.1"
+        }
+      
 }
