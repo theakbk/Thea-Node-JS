@@ -1,0 +1,28 @@
+.carousel0 {
+    color: brown;
+  }
+
+.carousel1 {
+    color: blue;
+}
+
+#carousel {
+    
+    font-size: large;
+    flex-grow: 1;
+}
+
+#carousel232323 {
+    margin-left: 50%;
+}
+
+#projects {
+
+    width: 50%;
+    float: left;
+}
+
+#carouselImage {
+    zwidth: 200px;
+}
+

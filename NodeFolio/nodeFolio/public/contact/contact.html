@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/contact/contact.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+<br><br>
+
+<h1 style="text-align: center;">Kontaktform</h1>
+    <form method="POST" action="/contact/sendMail">
+        <label>Name</label>
+        <br>
+        <input name="name" placeholder="Name">
+    
+        <br><br>
+    
+        <label>Email</label>
+        <br>
+        <input type="email" name="email" placeholder="Email">
+        <br><br>
+        <label>Subject</label>
+        <br>
+        <input name="subject" placeholder="Subject">
+        <br><br>
+        <label>Message</label>
+        <br>
+        <textarea name="message" placeholder="Message" rows="15" cols="50"></textarea>
+        <br><br>
+        <button type="submit">Contact Me!</button>
+        <br><br>
+    </form>
+</body>
+</html>
+

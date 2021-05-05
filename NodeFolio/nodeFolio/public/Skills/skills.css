@@ -1,0 +1,23 @@
+.progress {
+    height: 1.0em;
+    width: 10%;
+    background-color: #c9c9c9;
+    position: relative;
+  }
+  .progress:before {
+    content: attr(data-label);
+    font-size: 0.7em;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    left: 0;
+    right: 0;
+  }
+  .progress .value {
+    background-color: #7cc4ff;
+    display: inline-block;
+    height: 100%;
+  }
+  .vspace {
+    margin-bottom: 1cm;
+  }
