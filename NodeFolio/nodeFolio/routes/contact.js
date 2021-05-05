@@ -30,8 +30,8 @@ async function sendMail(subjectString, textMessage)
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: "thea2527@stud.kea.dk", // generated ethereal user
-            pass: "Khxr7x6#", // generated ethereal password
+            user: "thea2527@stud.kea.dk", 
+            pass: process.env.PASSWORD, 
           },
         });
 
@@ -44,12 +44,8 @@ async function sendMail(subjectString, textMessage)
     html: "<b>" + textMessage + "</b>", // html body
   });
 
-  console.log("Message sent: %s", info.messageId);
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  console.log("Message sent");
+  
 
-  // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
-//main().catch(console.error);
